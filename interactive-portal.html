@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-mode="dark" data-chakra="thirdeye" data-chakra-css="chakra-06-thirdeye-wisdom.css" data-chakra-ux="ux_10">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DNA Raw — Somatic Bio-Resonance &amp; 22-Modality Healing Atlas</title>
+<style>
+  :root { --bg: #F4F1EA; --card: #FDFBF7; --ink: #16181D; --muted: #4A5D73; --indigo: #3949AB; --emerald: #2D6A4F; --border: #D8D2C5; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 36px 24px 64px; }
+  .hero { background: var(--card); border: 2px solid var(--indigo); border-radius: 16px; padding: 30px; margin-bottom: 22px; }
+  .badge { display: inline-block; background: #E8EAF6; color: #1A237E; padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 800; text-transform: uppercase; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+  input { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); font-size: 15px; margin-top: 10px; }
+</style>
+<link rel="stylesheet" href="chakra-06-thirdeye-wisdom.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <span class="badge">DNA Raw &bull; Somatic &amp; Epigenetic Resonance Atlas</span>
+    <h1>Decode Somatic Signals Across All 7 Nerve Plexuses</h1>
+    <p>Search any physical tension, emotional pattern, or bio-energetic block to see its corresponding autonomic nerve plexus, endocrine gland, and natural healing modalities.</p>
+    <input id="q" placeholder="Filter by plexus or symptom (e.g. vagus, adrenals, throat, sleep, digestion, heart)..." oninput="render()" />
+  </div>
+  <div id="grid" class="grid"></div>
+</div>
+<script>
+const PLEXUS = [
+  { gate: "1. Root (Coccygeal Plexus / Adrenals)", signals: "Sciatica, lower-back tension, fight-or-flight exhaustion, cold feet, financial hyper-vigilance", protocol: "Barefoot earthing, warm sesame oil abhyanga, ashwagandha, slow 4-7-8 vagal breathing." },
+  { gate: "2. Sacral (Sacral Plexus / Gonads)", signals: "Hip rigidity, creative stagnation, emotional numbness or overwhelm, lower pelvic tension", protocol: "Somatic hip circles, hydrotherapy, warm cinnamon-ginger infusions, unedited creative flow." },
+  { gate: "3. Solar Plexus (Celiac Ganglion / Pancreas)", signals: "Digestive fire imbalance, perfectionism, burnout, Tight diaphragm, indecisiveness", protocol: "Agni Sara core activation, chamomile-fennel bitters, morning sunlight on the solar plexus." },
+  { gate: "4. Heart (Cardiac Plexus / Thymus)", signals: "Chest tightness, shallow upper-chest breathing, grief armor, difficulty receiving support", protocol: "Heart-coherence 5.5s resonance breathing, rose & hawthorn berry elixir, forgiveness somatic release." },
+  { gate: "5. Throat (Pharyngeal Plexus / Thyroid)", signals: "Jaw clenching (TMJ), neck stiffness, swallowed truth, fear of being heard", protocol: "Bhramari (Humming Bee) vagus nerve vibration, lion's breath, mineral-rich sea vegetables." },
+  { gate: "6. Third Eye (Cavernous Plexus / Pituitary & Pineal)", signals: "Screen fatigue, tension headaches, insomnia, fragmented attention, over-analysis", protocol: "Trataka candle gazing, pitch-dark sleep sanctuary, sunset circadian blue-light cut." },
+  { gate: "7. Crown (Cerebral Cortex / Pineal)", signals: "Existential disconnection, cynicism, nervous-system isolation, loss of meaning", protocol: "20-minute silent witness meditation, nature immersion, selfless service (Karma Yoga)." }
+];
+function render() {
+  const q = (document.getElementById('q').value || '').toLowerCase();
+  const rows = PLEXUS.filter(p => !q || (p.gate + ' ' + p.signals + ' ' + p.protocol).toLowerCase().includes(q));
+  document.getElementById('grid').innerHTML = rows.map(p => `
+    <div class="card">
+      <h3>${p.gate}</h3>
+      <p><strong>Somatic Signals:</strong> ${p.signals}</p>
+      <p><strong>Epigenetic &amp; Somatic Protocol:</strong> ${p.protocol}</p>
+    </div>
+  `).join('');
+}
+render();
+</script>
+
+<!--EE-CHAKRA-UX-TEMPLATE-START-->
+<section class="ee-walkthrough ee-chakra-thirdeye-walkthrough" aria-label="Approved Chakra 06 Guided UX Template">
+  <div class="ee-chakra-thirdeye-card">
+    <span class="ee-chakra-thirdeye-kicker">CHAKRA 06 &middot; AJNA (852 Hz) &middot; GLOBAL STYLESHEET #10 + UX TEMPLATE #10</span>
+    <h2 class="ee-chakra-thirdeye-title">Ajna Third Eye &amp; DNA Raw Master Portal Template (v8.8)</h2>
+    <p class="ee-chakra-thirdeye-lead">Flagship Third Eye 3-step guided template automatically applied to DNA Raw, Oracle, and Model Router &mdash; Powered by <code>chakra-06-thirdeye-wisdom.css</code> (Stylesheet #10: Ajna 852 Hz Royal Starlight Indigo Master Stylesheet (v8.8), Canvas <code>#090B10</code>, Surface <code>#131722</code>, Accent <code>#818CF8</code>).</p>
+    <div class="ee-step-rail ee-chakra-thirdeye-step-rail" role="tablist">
+      <button type="button" class="ee-step-btn ee-chakra-thirdeye-step-btn is-active" onclick="[1,2,3].forEach(function(i){var el=document.getElementById('ee_cx_thirdeye_s'+i);if(el){el.hidden=(i!==1);el.classList.toggle('is-active',i===1);}});Array.prototype.forEach.call(this.parentNode.querySelectorAll('.ee-step-btn'),function(b){b.classList.remove('is-active');});this.classList.add('is-active');">Step 01 &middot; Tune In to Somatic Signal</button>
+      <button type="button" class="ee-step-btn ee-chakra-thirdeye-step-btn" onclick="[1,2,3].forEach(function(i){var el=document.getElementById('ee_cx_thirdeye_s'+i);if(el){el.hidden=(i!==2);el.classList.toggle('is-active',i===2);}});Array.prototype.forEach.call(this.parentNode.querySelectorAll('.ee-step-btn'),function(b){b.classList.remove('is-active');});this.classList.add('is-active');">Step 02 &middot; Decode Underlying Pattern</button>
+      <button type="button" class="ee-step-btn ee-chakra-thirdeye-step-btn" onclick="[1,2,3].forEach(function(i){var el=document.getElementById('ee_cx_thirdeye_s'+i);if(el){el.hidden=(i!==3);el.classList.toggle('is-active',i===3);}});Array.prototype.forEach.call(this.parentNode.querySelectorAll('.ee-step-btn'),function(b){b.classList.remove('is-active');});this.classList.add('is-active');">Step 03 &middot; Apply Wise Action</button>
+    </div>
+    <div id="ee_cx_thirdeye_s1" class="ee-step-panel">
+      <p><strong>Step 01 &middot; Tune In to Somatic Signal:</strong> Begin in a calm, single-focus container with zero multi-column clutter. Select your primary input below and advance when ready.</p>
+    </div>
+    <div id="ee_cx_thirdeye_s2" class="ee-step-panel" hidden>
+      <p><strong>Step 02 &middot; Decode Underlying Pattern:</strong> Review the tailored Ajna (852 Hz) protocol and verify alignment before sealing your action.</p>
+    </div>
+    <div id="ee_cx_thirdeye_s3" class="ee-step-panel" hidden>
+      <p><strong>Step 03 &middot; Apply Wise Action:</strong> Action verified under <code>chakra-06-thirdeye-wisdom.css</code> (Stylesheet #10) and UX Template #10.</p>
+    </div>
+  </div>
+</section>
+<!--EE-CHAKRA-UX-TEMPLATE-END-->
+</body>
+</html>
